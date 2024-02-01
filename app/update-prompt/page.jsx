@@ -13,7 +13,7 @@ const EditPrompt = () => {
 
   const searchParams =  useSearchParams();
 
-  const promptId = searchParams.get("id");
+  const promptId = searchParams.get("id") ||  null;
 
   const [post, setPost] = useState({
     prompt: "",
