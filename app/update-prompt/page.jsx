@@ -32,7 +32,9 @@ const EditPrompt = () => {
             }
         )
     }
-    getPromptDetails();
+    if(promptId){
+        getPromptDetails();
+    }
   },[promptId]);
 
   const updatePrompt = async (e) => {
