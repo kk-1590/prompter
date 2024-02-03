@@ -14,6 +14,7 @@ const CreatePrompt = () => {
     const [post,setPost] = useState({
         prompt : '',
         tag : '',
+
     })
 
     const createPrompt = async (e) => {
@@ -26,8 +27,8 @@ const CreatePrompt = () => {
                 method : 'POST',
                 body: JSON.stringify({
                     prompt : post.prompt,
-                    userId : session ?. user.id,
-                    tag : post.tag
+                    userId : session?.user.id,
+                    tag : post.tag,
                 })
             })
 
