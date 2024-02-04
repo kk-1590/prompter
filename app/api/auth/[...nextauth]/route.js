@@ -20,7 +20,7 @@ const handler = NextAuth({
     }),
   ],
 
-  callback: {
+  callbacks: {
     async session({ session }) {
       const sessionUser = await mongoose.model('User').findOne({
         email: session.user.email,
